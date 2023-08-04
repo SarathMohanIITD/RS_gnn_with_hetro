@@ -88,7 +88,7 @@ if dataset in ['chameleon', 'squirrel']:
     idx_train = data["idx_train"]
     idx_val = data["idx_val"]
     idx_test = data["idx_test"]
-    if  args.attack == 'meta':
+    if  args.attack in ['meta','nettack']:
         adj = load_npz(f'data/{dataset}_perturbed_{args.ptb_rate}.npz')
     else:
         adj = load_npz(f'data/{dataset}.npz')
